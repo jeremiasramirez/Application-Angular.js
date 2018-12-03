@@ -48,4 +48,20 @@ modul()
  		}
  	},false);
 
+
+
+
+let containerClose = document.getElementById("container__close-js");
+let containerPokemon = document.getElementById("container__pokemons-js");
+
+  containerClose.addEventListener("click",function(){
+
+  })
+ console.log( document.body.containerPokemon)
+
+
+
+
+
+
  
