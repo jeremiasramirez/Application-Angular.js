@@ -1,53 +1,150 @@
 <!DOCTYPE html>
 <html lang="es" ng-app='moduleApp'>
 <head>
-	<meta charset="UTF-8">
-	<title>Angular Js</title>
-	<meta name="viewport" content="width=device-width,
-	 user-scalable=no,
-	initial-scale=1.0,
-	maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="stylesheet" href="public/css/index.css"> 
+    <meta charset="UTF-8">
+    <title>Angular Js</title>
 	<script src="public/js/lib/angular.min.js"></script>
+    <meta name="viewport" content="width=device-width,
+     user-scalable=no,
+    initial-scale=1.0,
+    maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="public/css/index.css"> 
 </head>
 
 
 <body ng-controller="appController as pokeCtrl">
-	
-	<header class="main__header" id="main__logo__js" >
-		<img src="public/img/logo.png" alt=""  class="main__logo">
-	</header>
+    
+    <header class="main__header" id="main__logo__js" >
+        <img src="public/img/logo.png" alt=""  class="main__logo">
+    </header>
+<p id=message style="text-align:center">
+     
+</p>
+    <!-- DATOS DEL CONTROLADOR -->
+    <div class="container__controll div" id="container__controll" >
+
+        <div class="container__pokemons"  id="container__pokemons-js">
+        <span class="container__close" id="container__close-js">X</span>
+    <h1 class=container__title>{{pokeCtrl.pokemons.nombre | uppercase}} {{pokeCtrl.pokemons.ides}}</h1>
+    <h2 class=container__subtitle>{{pokeCtrl.pokemons.species}}</h2>
+    <img src=public/img/pokemons/bulbasaur.jpg alt="" class="pokemon__img">
+    <ul class=pokemon__characteristic>
+        <li class=pokemon__characteristic__item id="containerElement">
+            <strong id="type__values__js">Type: </strong>
+         
+            <span ng-repeat="tipo in pokeCtrl.pokemons.tipo" class="type__value" id="type__value-js"> {{tipo}} </span >
  
- 	<!-- DATOS DEL CONTROLADOR -->
- 	<div class="container__controll" id="container__controll">
+        </li>
 
- 		<div class="container__pokemons"  id="container__pokemons-js">
- 		<span class="container__close" id="container__close-js">X</span>
-	<h1 class=container__title>{{pokeCtrl.pokemons.nombre | uppercase}} {{pokeCtrl.pokemons.ides}}</h1>
-	<h2 class=container__subtitle>{{pokeCtrl.pokemons.species}}</h2>
-	<img src=public/img/pokemons/bulbasaur.jpg alt="" class="pokemon__img">
-	<ul class=pokemon__characteristic>
-		<li class=pokemon__characteristic__item id="containerElement">
-			<strong id="type__values__js">Type: </strong>
-		 
-			<span ng-repeat="tipo in pokeCtrl.pokemons.tipo" class="type__value" id="type__value-js"> {{tipo}} </span >
- 
-		</li>
+        <li class=pokemon__characteristic__item><strong>Weight:</strong> {{pokeCtrl.pokemons.peso}}</li>
+        <li class=pokemon__characteristic__item><strong>Height:</strong> {{pokeCtrl.pokemons.altura}}</li>
+    </ul>
+        <div class="container__banner__price" ng-controller='appControllerPrice as priceCtrl'>
 
-		<li class=pokemon__characteristic__item><strong>Weight:</strong> {{pokeCtrl.pokemons.peso}}</li>
-		<li class=pokemon__characteristic__item><strong>Height:</strong> {{pokeCtrl.pokemons.altura}}</li>
-	</ul>
- 		<div class="container__banner__price" ng-controller='appControllerPrice as priceCtrl'>
-
- 			<strong class="banner__price__name">{{priceCtrl.price.priceName | uppercase}}</strong>
- 			<span class="banner__price__value">{{priceCtrl.price.priceValue}}</span>
- 		</div>
- 		
- 		</div>
+            <strong class="banner__price__name">{{priceCtrl.price.priceName | uppercase}}</strong>
+            <span class="banner__price__value">{{priceCtrl.price.priceValue}}</span>
+        </div>
+        
+        </div>
 
 
 
         <div class="container__pokemons"  id="container__pokemons-js">
+            <span class="container__close" id="container__close-js">X</span>
+            <h1 class=container__title>{{pokeCtrl.pokemons.nombre | uppercase}} {{pokeCtrl.pokemons.ides}}</h1>
+            <h2 class=container__subtitle>{{pokeCtrl.pokemons.species}}</h2>
+            <img src=public/img/pokemons/bulbasaur.jpg alt="" class="pokemon__img">
+            <ul class=pokemon__characteristic>
+                <li class=pokemon__characteristic__item id="containerElement">
+                    <strong id="type__values__js">Type: </strong>
+
+                    <span ng-repeat="tipo in pokeCtrl.pokemons.tipo" class="type__value" id="type__value-js"> {{tipo}} </span >
+
+                </li>
+
+                <li class=pokemon__characteristic__item><strong>Weight:</strong> {{pokeCtrl.pokemons.peso}}</li>
+                <li class=pokemon__characteristic__item><strong>Height:</strong> {{pokeCtrl.pokemons.altura}}</li>
+            </ul>
+            <div class="container__banner__price" ng-controller='appControllerPrice as priceCtrl'>
+
+                <strong class="banner__price__name">{{priceCtrl.price.priceName | uppercase}}</strong>
+                <span class="banner__price__value">{{priceCtrl.price.priceValue}}</span>
+            </div>
+
+        </div><div class="container__pokemons"  id="container__pokemons-js">
+            <span class="container__close" id="container__close-js">X</span>
+            <h1 class=container__title>{{pokeCtrl.pokemons.nombre | uppercase}} {{pokeCtrl.pokemons.ides}}</h1>
+            <h2 class=container__subtitle>{{pokeCtrl.pokemons.species}}</h2>
+            <img src=public/img/pokemons/bulbasaur.jpg alt="" class="pokemon__img">
+            <ul class=pokemon__characteristic>
+                <li class=pokemon__characteristic__item id="containerElement">
+                    <strong id="type__values__js">Type: </strong>
+
+                    <span ng-repeat="tipo in pokeCtrl.pokemons.tipo" class="type__value" id="type__value-js"> {{tipo}} </span >
+
+                </li>
+
+                <li class=pokemon__characteristic__item><strong>Weight:</strong> {{pokeCtrl.pokemons.peso}}</li>
+                <li class=pokemon__characteristic__item><strong>Height:</strong> {{pokeCtrl.pokemons.altura}}</li>
+            </ul>
+            <div class="container__banner__price" ng-controller='appControllerPrice as priceCtrl'>
+
+                <strong class="banner__price__name">{{priceCtrl.price.priceName | uppercase}}</strong>
+                <span class="banner__price__value">{{priceCtrl.price.priceValue}}</span>
+            </div>
+
+        </div><div class="container__pokemons"  id="container__pokemons-js">
+            <span class="container__close" id="container__close-js">X</span>
+            <h1 class=container__title>{{pokeCtrl.pokemons.nombre | uppercase}} {{pokeCtrl.pokemons.ides}}</h1>
+            <h2 class=container__subtitle>{{pokeCtrl.pokemons.species}}</h2>
+            <img src=public/img/pokemons/bulbasaur.jpg alt="" class="pokemon__img">
+            <ul class=pokemon__characteristic>
+                <li class=pokemon__characteristic__item id="containerElement">
+                    <strong id="type__values__js">Type: </strong>
+
+                    <span ng-repeat="tipo in pokeCtrl.pokemons.tipo" class="type__value" id="type__value-js"> {{tipo}} </span >
+
+                </li>
+
+                <li class=pokemon__characteristic__item><strong>Weight:</strong> {{pokeCtrl.pokemons.peso}}</li>
+                <li class=pokemon__characteristic__item><strong>Height:</strong> {{pokeCtrl.pokemons.altura}}</li>
+            </ul>
+            <div class="container__banner__price" ng-controller='appControllerPrice as priceCtrl'>
+
+                <strong class="banner__price__name">{{priceCtrl.price.priceName | uppercase}}</strong>
+                <span class="banner__price__value">{{priceCtrl.price.priceValue}}</span>
+            </div>
+
+        </div><div class="container__pokemons"  id="container__pokemons-js">
+            <span class="container__close" id="container__close-js">X</span>
+            <h1 class=container__title>{{pokeCtrl.pokemons.nombre | uppercase}} {{pokeCtrl.pokemons.ides}}</h1>
+            <h2 class=container__subtitle>{{pokeCtrl.pokemons.species}}</h2>
+            <img src=public/img/pokemons/bulbasaur.jpg alt="" class="pokemon__img">
+            <ul class=pokemon__characteristic>
+                <li class=pokemon__characteristic__item id="containerElement">
+                    <strong id="type__values__js">Type: </strong>
+
+                    <span ng-repeat="tipo in pokeCtrl.pokemons.tipo" class="type__value" id="type__value-js"> {{tipo}} </span >
+
+                </li>
+
+                <li class=pokemon__characteristic__item><strong>Weight:</strong> {{pokeCtrl.pokemons.peso}}</li>
+                <li class=pokemon__characteristic__item><strong>Height:</strong> {{pokeCtrl.pokemons.altura}}</li>
+            </ul>
+            <div class="container__banner__price" ng-controller='appControllerPrice as priceCtrl'>
+
+                <strong class="banner__price__name">{{priceCtrl.price.priceName | uppercase}}</strong>
+                <span class="banner__price__value">{{priceCtrl.price.priceValue}}</span>
+            </div>
+
+        </div>
+
+
+
+
+
+        
+ <div class="container__pokemons"  id="container__pokemons-js">
             <span class="container__close" id="container__close-js">X</span>
             <h1 class=container__title>{{pokeCtrl.pokemons.nombre | uppercase}} {{pokeCtrl.pokemons.ides}}</h1>
             <h2 class=container__subtitle>{{pokeCtrl.pokemons.species}}</h2>
@@ -101,9 +198,6 @@
 
 
     </div>
-
-
-
 
 
 

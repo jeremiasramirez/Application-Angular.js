@@ -51,14 +51,31 @@ modul()
 
 
 
-let containerClose = document.getElementById("container__close-js");
-let containerPokemon = document.getElementById("container__pokemons-js");
+let container= document.getElementById("container__controll");
 
-  containerClose.addEventListener("click",function(){
-
-  })
- console.log( document.body.containerPokemon)
-
+let Close = container.querySelectorAll("div")
+ 
+	for(let i=0;i<Close.length; i++){
+		 Close[i].addEventListener("click",(e)=>{
+  	 		 Close[i].remove();
+  	 		 let container= document.getElementById("message");
+  	 		 let message= document.createElement("p");
+  	 		 	message.textContent= "Eliminado";
+  	 		 	message.classList.add("trans")
+  	 		 	// message.style.top=window.scrollY+'px';
+  	 		 	container.appendChild(message);
+  	 		 	let timeAnimation = setTimeout(()=>{
+  	 		 	message.classList.add("scale");
+  	 		 		
+  	 		 	},1000)
+  	 		 	let timeDelete = setTimeout(()=>{
+  	 		 	 
+  	 		 		// message.remove();
+  	 		 	},2000)
+  			},false)
+	}
+ 
+  
 
 
 
