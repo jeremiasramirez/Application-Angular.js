@@ -37,7 +37,7 @@ modul()
  
  let logoClick = document.getElementById("main__logo__js")
  
- 
+
  	logoClick.addEventListener("click",function(){
  	 
  	
@@ -52,33 +52,18 @@ modul()
 
 
 let container= document.getElementById("container__controll");
-
-let Close = container.querySelectorAll("div")
  
-	for(let i=0;i<Close.length; i++){
-		 Close[i].addEventListener("click",(e)=>{
-  	 		 Close[i].remove();
-  	 		 let container= document.getElementById("message");
-  	 		 let message= document.createElement("p");
-  	 		 	message.textContent= "Eliminado";
-  	 		 	message.classList.add("trans")
-  	 		 	// message.style.top=window.scrollY+'px';
-  	 		 	container.appendChild(message);
-  	 		 	let timeAnimation = setTimeout(()=>{
-  	 		 	message.classList.add("scale");
-  	 		 		
-  	 		 	},1000)
-  	 		 	let timeDelete = setTimeout(()=>{
-  	 		 	 
-  	 		 		// message.remove();
-  	 		 	},2000)
-  			},false)
-	}
  
-  
+ 
+ let all = container.querySelectorAll('.container__pokemons')
+ let close = container.querySelectorAll('.container__close')
 
-
-
+ 
+for(let i=0; i<all.length; i++){
+	close[i].addEventListener("click", ()=>{
+		all[i].remove()
+	})
+}
 
 
  
