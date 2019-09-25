@@ -16,7 +16,7 @@ body{
 	box-shadow: 0px 1px 20px #9999;
 }
 
- 
+
 .main__logo{
 	width: 70px;
 	padding: 1em 0 1em 0;
@@ -25,7 +25,7 @@ body{
 @media screen and (max-width: 500px){
 	.main__logo{
 		width: 68px;
-	} 
+	}
 }
 @media screen and (min-width: 320px){
 	.type__value{
@@ -34,7 +34,10 @@ body{
 }
 
 .container__controll{
-	display: grid;
+	display: inline-flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
 	justify-content: center;
 	padding: 0 .5em .3em .5em;
 }
@@ -55,6 +58,8 @@ body{
  	padding:3em;
  	border-radius: 3px;
  	margin-top: 1.3em;
+	height: 800px;
+	margin:.5em;
  	max-width: 300px;
  }
  .container__close{
@@ -78,7 +83,7 @@ body{
  .pokemon__characteristic{
  	display: flex;
  	justify-content: center;
- 	
+
  	flex-direction: column;
  }
  .pokemon__characteristic__item{
@@ -104,7 +109,7 @@ body{
  }
 
  .container__banner__price{
-	
+
  	background-color: orangered;
  	position: relative;
  	bottom: -1.5em;
@@ -136,7 +141,7 @@ body{
  	color: #ddd;
  }
   .container__banner__price:hover .banner__price__value{
- 	 
+
 
 	background-color: rgba(0%,0%,0%,.500);
 	transform: translateX(5rem);
@@ -187,7 +192,7 @@ body{
  	align-items: center;
  	transform: scale(.9);
  }
- 
+
 
  .trans{
  	width: 200px;

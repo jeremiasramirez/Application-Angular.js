@@ -8,17 +8,17 @@
      user-scalable=no,
     initial-scale=1.0,
     maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="public/css/index.css"> 
+    <link rel="stylesheet" href="public/css/index.css">
 </head>
 
 
 <body ng-controller="appController as pokeCtrl">
-    
+
     <header class="main__header" id="main__logo__js" >
         <img src="public/img/logo.png" alt=""  class="main__logo">
     </header>
 <p id=message style="text-align:center">
-     
+
 </p>
     <!-- DATOS DEL CONTROLADOR -->
     <div class="container__controll div" id="container__controll" >
@@ -31,9 +31,9 @@
     <ul class=pokemon__characteristic>
         <li class=pokemon__characteristic__item id="containerElement">
             <strong id="type__values__js">Type: </strong>
-         
+
             <span ng-repeat="tipo in pokeCtrl.pokemons.tipo" class="type__value" id="type__value-js"> {{tipo}} </span >
- 
+
         </li>
 
         <li class=pokemon__characteristic__item><strong>Weight:</strong> {{pokeCtrl.pokemons.peso}}</li>
@@ -44,7 +44,7 @@
             <strong class="banner__price__name">{{priceCtrl.price.priceName | uppercase}}</strong>
             <span class="banner__price__value">{{priceCtrl.price.priceValue}}</span>
         </div>
-        
+
         </div>
 
 
@@ -53,7 +53,7 @@
             <span class="container__close" id="container__close-js">X</span>
             <h1 class=container__title>{{pokeCtrl.pokemons.nombre | uppercase}} {{pokeCtrl.pokemons.ides}}</h1>
             <h2 class=container__subtitle>{{pokeCtrl.pokemons.species}}</h2>
-            <img src=public/img/pokemons/bulbasaur.jpg alt="" class="pokemon__img">
+            <img src=public/img/pokemons/ivysaur.jpg alt="" class="pokemon__img">
             <ul class=pokemon__characteristic>
                 <li class=pokemon__characteristic__item id="containerElement">
                     <strong id="type__values__js">Type: </strong>
@@ -75,7 +75,7 @@
             <span class="container__close" id="container__close-js">X</span>
             <h1 class=container__title>{{pokeCtrl.pokemons.nombre | uppercase}} {{pokeCtrl.pokemons.ides}}</h1>
             <h2 class=container__subtitle>{{pokeCtrl.pokemons.species}}</h2>
-            <img src=public/img/pokemons/bulbasaur.jpg alt="" class="pokemon__img">
+            <img src=public/img/pokemons/venusaur.jpg alt="" class="pokemon__img">
             <ul class=pokemon__characteristic>
                 <li class=pokemon__characteristic__item id="containerElement">
                     <strong id="type__values__js">Type: </strong>
@@ -143,7 +143,7 @@
 
 
 
-        
+
  <div class="container__pokemons"  id="container__pokemons-js">
             <span class="container__close" id="container__close-js">X</span>
             <h1 class=container__title>{{pokeCtrl.pokemons.nombre | uppercase}} {{pokeCtrl.pokemons.ides}}</h1>
